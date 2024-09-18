@@ -1,0 +1,522 @@
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+   
+}
+ul{
+    display:flex;
+    justify-content: left;
+    padding:1px 10px;
+    /* background-color:black; */
+    
+}
+ul li{
+    text-decoration: none;
+    list-style-type: none;
+    color:rgb(0, 0, 0);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* background-color: black; */
+    padding:5px;
+    cursor: pointer;
+    font-size:30px;
+    filter:drop-shadow(1px 1px 10px green);
+    font-weight: bolder;
+}
+a{
+    text-decoration: none;
+}
+nav{
+    position:fixed;
+    width:100%;
+    height:60px;
+    box-shadow: 1px 1px 10px rgb(208, 205, 205);
+    z-index:100;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.mainDiv{
+    display:flex;
+    flex-direction:column;
+}
+#searchMov{
+    margin-top:10px;
+    width:99%;
+    box-shadow:none;
+    outline:none;
+    border:1.5px solid black;
+    background: transparent;
+    max-width:1000px;
+    /* display:flex;
+    justify-content: center;
+    align-content: center; */
+    height:40px;
+    border-radius:25px;
+    font-size:20px;
+}
+#cardBody{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px rgb(185, 181, 181);
+    width:99%;
+    max-width:200px;
+    position: relative;
+    
+    
+}
+
+#cardBody img{
+    width:200px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    height:250px;
+    padding-right:2px;
+    /* border:1px solid red; */
+}
+#cardBody:hover{
+    box-shadow: 1px 1px 10px black;
+    transition: 0.0125sec all ease-in;
+}
+
+
+#pcardBody{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px rgb(185, 181, 181);
+    width:99%;
+    grid-gap:20px;
+    max-width:150px;
+    border-radius: 10px;
+    height:260px;
+    max-height: 99%;
+    /* position: relative; */
+    
+    
+}
+#pcrecardBody{
+    display:flex;
+    flex-direction: column;
+    box-shadow: 1px 1px 1px rgb(185, 181, 181);
+    width:99%;
+    grid-gap:20px;
+    max-width:150px;
+    border-radius: 10px;
+    height:300px;
+    max-height: 99%;
+}
+#pcrecardBody img{
+    width:100%;
+    max-width:150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    box-shadow: 1px 1px 5px black;
+    height:100%;
+    object-fit:cover;
+    max-height:200px;
+    /* padding-right:2px; */
+    /* border:1px solid red; */
+}
+.posteR_size{
+    border-radius: 10px;
+}
+#pcrecardBody:hover{
+    box-shadow: 1px 1px 10px black;
+    transition: 0.0125sec all ease-in;
+}
+.date,.ovw,.bud,.rd,.tl,.movie__title{
+    color:white;
+}
+#pcardBody img{
+    width:100%;
+    max-width:150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
+    box-shadow: 1px 1px 5px black;
+    height:100%;
+    object-fit:cover;
+    max-height:200px;
+    /* padding-right:2px; */
+    /* border:1px solid red; */
+}
+#pcardBody:hover{
+    box-shadow: 1px 1px 10px black;
+    transition: 0.0125sec all ease-in;
+}
+.forDisMov{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+    grid-gap:10px;
+}
+.startDis{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin:8px;
+    grid-gap:8px;
+}
+#filterTrend{
+    height:30px;
+    width:100px;
+    transition: 0.125s width ease-in;
+}
+#filterClear{
+    outline:none;
+    box-shadow: none;
+    background-color: white;
+    cursor: pointer;
+    border:none;
+}
+.labelMainDis{
+    display: flex;
+    flex-direction: row;
+    grid-gap:20px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+#cardBodyActor{
+    display:flex;
+    flex-direction: row;
+    /* box-shadow: 1px 1px 5px rgb(185, 181, 181); */
+   
+}
+.forAcTors_display{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.mainActorDisplay{
+    display:flex;
+    flex-direction: row;
+    overflow-x:auto;
+    overflow-y: hidden;
+    grid-gap:10px;
+}
+.movie_title{
+   
+    padding:14px;
+
+}
+.movie_title p{
+    font-size:14px;
+    text-decoration: none;
+    font-weight: 400;
+}
+.progress{
+    height:40px;
+}
+.info{
+    /* height:30px;
+    width:30px;
+    border-radius: 15px;
+    background-color: white; */
+    top:0;
+    right:0;
+    position:absolute;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.info button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    align-items: center;
+    text-align: center;
+    box-shadow: none;
+    outline:none;
+    background-color:white;
+    position: relative;
+    height:30px;
+    width:30px;
+    border-radius: 15px;
+    left:-4px;
+    /* z-index: 100; */
+}
+
+.movieInfoBody{
+    display:flex;
+    flex-direction: row;
+    grid-gap:8px;
+}
+
+.movieInfoBody text-info{
+    display: flex;
+    flex-direction: column;
+    padding:4px;
+    overflow-y:auto;
+    overflow-x:hidden;
+    margin:4px;
+}
+
+.text-info h1{
+    color:white;
+    font-size:30px;
+}
+.text-info h3{
+    font-size: 14px;
+    color:white;
+}
+.actorAlign{
+    display:flex;
+    flex-direction: row;
+    grid-gap:10px;
+    flex-wrap: wrap;
+    
+}
+
+.aboutBody{
+    top:100px;
+    box-shadow:1px 1px 5px black;
+    width:90%;
+    color:white;
+    position:relative;
+    left:70px;
+    position:relative;
+    background-color: black;
+}
+.personImage{
+    height:500px;
+    width:200px;
+    border-radius:10px;
+}
+.inUserImage{
+    height:200px;
+    width:300px;
+}
+.personBody{
+    top:90px;
+    /* box-shadow:1px 1px 5px black; */
+    width:100%;
+    color:white;
+    position:relative;
+    
+    
+    
+}
+.personDetails{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    
+}
+.per_image_photo{
+    min-height:400px;
+    height:99%;
+    min-width:300px;
+    width:99%;
+    border-radius: 6px;
+    /* border: 1px solid red; */
+}
+.card_image_photo{
+    min-height:200px;
+    height:100%;
+    min-width:150px;
+    width:99%;
+    border-radius: 6px;
+}
+.allMovies{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.allMov{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    
+}
+.extraRoles{
+    display:flex;
+    flex-direction: row;
+    gap:20px;
+    flex-wrap: wrap;
+}
+.allMov span{
+    font-size: 20px;
+    padding:10px;
+    color:black;
+    font-weight: bold;
+}
+.personInfo{
+    color:black;
+}
+.bioClass{
+    font-size:16px;
+}
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+  }
+
+.movieDetails{
+    display:flex;
+    flex-direction: row;
+    flex:300px 1fr;
+    grid-gap:10px;
+}
+.movieInfo{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* border:2px solid rgb(160, 210, 84); */
+    width:99%;
+    margin:6px;
+    padding:4px;
+    box-sizing: border-box;
+    max-width:auto
+    
+
+
+}
+.secondDiv{
+    display:flex;
+    flex-direction:column;
+}
+.PersonalInform,p,small {
+    color:black;
+}
+.knownFor{
+    display: flex;
+    flex-direction: row;
+    
+    grid-gap:10px;
+}
+.imagePerInfo{
+    display: flex;
+    flex-direction: column;
+    
+    grid-gap:10px;
+}
+.videos{
+    display:flex;
+    flex-direction: row;
+    grid-gap:10px;
+    flex-wrap: wrap;
+    padding-top:10px;
+}
+.videos iframe{
+    width: 345px;
+    height:250px;
+    border-radius: 10px;
+}
+.movie__title{
+    font-size: 16px;
+    font-weight:700;
+    width:340px;
+    max-width:99%;
+    padding:8px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.movie__pub_date{
+    font-weight: 500;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom:10px;
+    position:relative;
+    bottom:20px;
+    padding:8px;
+    color:lightgray;
+}
+
+#cardBodyActorI{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    grid-gap:10px;
+    width:150px;
+    background-color: aquamarine;
+    height:200px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.castConatainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap:10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.crewConatainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-gap:10px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.spinner-border{
+    /* display:block; */
+    color:rgb(247, 243, 243);
+}
+
+
+@media screen and (max-width:600px){
+    .personDetails{
+        display:flex;
+        flex-direction: column;
+        gap:10px;
+        
+    }
+    .knownFor{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-gap:10px;
+    }
+    .movieDetails{
+        display:flex;
+        flex-direction: column;
+        flex:300px 1fr;
+        
+        grid-gap:10px;
+    }
+    .aboutBody{
+        top:75px;
+        box-shadow:1px 1px 5px black;
+        width:99%;
+        max-width:600px;
+        color:white;
+        position:relative;
+        left:1px;
+        position:relative;
+        background-color: black;
+    }
+    .posteR_size{
+        height:300px;
+        width:595px;
+        object-fit:fill;
+        border-radius: 10px;
+       
+    }
+    .imageContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
