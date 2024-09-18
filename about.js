@@ -64,7 +64,7 @@ async function getMovieData() {
         : "images/download.png";
 
       castCon.innerHTML += `
-         <a href="/projects/adi_movie_db/person.html?id=${i.id}?name=${upgrade_name}" style="text-decoration:none;">
+         <a href="https://adi4b1.github.io/projects/adi_movie_db/person.html?id=${i.id}?name=${upgrade_name}" style="text-decoration:none;">
         <div id="cardBodyActorI" class="card">
                         <img src="${actor_image}" class="lazyload"  style="width:100px; height:100px;border-radius:50px;" alt="pic">               
                         <p>${i.name.substr(0, 15)}</p>
@@ -87,7 +87,7 @@ async function getMovieData() {
         : "images/download.png";
 
       crewCon.innerHTML += `
-        <a href="/projects/adi_movie_db/person.html?id=${i.id}?name=${upgrade_name}" style="text-decoration:none;">
+        <a href="https://adi4b1.github.io/projects/adi_movie_db/person.html?id=${i.id}?name=${upgrade_name}" style="text-decoration:none;">
         <div id="cardBodyActorI" class="card">
                         <img src="${actor_image}" class="lazyload"  style="width:100px; height:100px;border-radius:50px;" alt="pic">               
                         <p>${i.name.substr(0, 15)}</p>
