@@ -106,7 +106,7 @@ async function getPersonData() {
 
         <div id="pcardBody" class="card">
         
-           <a href="/projects/adi_movie_db/about.html?id=${i.id}" style="text-decoration:none;">
+           <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/projects/adi_movie_db/about.html?id=${i.id}" style="text-decoration:none;">
                 <div>
                     <img src="${pcimage}" class="card_image_photo lazyload" alt="pic">
                 </div>
@@ -168,7 +168,7 @@ ${akai}
       am.innerHTML+=`
        <div id="pcardBody" class="">
         
-           <a href="/projects/adi_movie_db/about.html?id=${i.id}" style="text-decoration:none;">
+           <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/projects/adi_movie_db/about.html?id=${i.id}" style="text-decoration:none;">
                 <div>
                     <img src="${allcimage}" class="card_image_photo lazyload" alt="pic">
                 </div>
@@ -194,7 +194,7 @@ ${akai}
       er.innerHTML+=`
        <div id="pcrecardBody" class="card">
         
-           <a href="/projects/adi_movie_db/about.html?id=${i.id}" style="text-decoration:none;">
+           <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/projects/adi_movie_db/about.html?id=${i.id}" style="text-decoration:none;">
                 <div>
                     <img src="${allcimage}" class="card_image_photo lazyload" alt="pic">
                 </div>
