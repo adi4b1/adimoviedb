@@ -148,7 +148,7 @@ let videoEmbed = video
 
       sd.innerHTML+=`
             <div id="cardBody" class="card">
-           <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/projects/adi_movie_db/about.html?id=${j.id}" style="text-decoration:none;">
+           <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/about.html?id=${j.id}" style="text-decoration:none;">
                 <div>
                     <img src="${image_url}"  class="lazyload" alt="pic">
                 </div>
@@ -233,7 +233,7 @@ let videoEmbed = video
         : "images/download.png";
         modalactors.innerHTML+= `           
             <div id="cardBodyActor" class="">
-            <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/projects/adi_movie_db/person.html?id=${actor.id}?name=${actor.name}">
+            <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/person.html?id=${actor.id}?name=${actor.name}">
                     <img src="${actorimage_url}" style="width:100px; height:100px;border-radius:50px;" alt="pic">
                     </a>
             </div>
@@ -352,7 +352,7 @@ getPopular(page)
         res.innerHTML += `
          
             <div id="cardBody" class="card">
-           <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/projects/adi_movie_db/about.html?id=${i.id}" style="text-decoration:none;">
+           <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/about.html?id=${i.id}" style="text-decoration:none;">
                 <div>
                     <img src="${image_url}"  alt="pic">
                 </div>
@@ -437,7 +437,7 @@ getPopular(page)
       : "images/download.png";
       modalactors.innerHTML+= `           
           <div id="cardBodyActor" class="">
-          <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/projects/adi_movie_db/person.html?id=${actor.id}?name=${actor.name}">
+          <a href="https://adimoviedb-calagubtb-kesavs-projects-429bf22a.vercel.app/person.html?id=${actor.id}?name=${actor.name}">
                   <img src="${actorimage_url}" style="width:100px; height:100px;border-radius:50px;" alt="pic">
                   </a>
           </div>
