@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9981055443242316" crossorigin="anonymous"></script>
+    <title>Play with Multiple Languages Online Editor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/theme/darcula.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Font Awesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/python/python.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/clike/clike.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/htmlmixed/htmlmixed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.58.1/mode/sql/sql.min.js"></script>
+    
+    <!-- //leaflet -->
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+
+     <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+ integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+ crossorigin=""></script>
+    <style>
+        #map { height: 500px; }
+    </style>
+</head>
+
+<body>
+
+    <div id="map"></div>
+    <script>
+     
+/**let latitude_loc;
+let longitude_loc;
+        navigator.geolocation.getCurrentPosition((position)=>{
+            latitude_loc=position.coords.latitude
+            longitude_loc=position.coords.longitude
+            console.log('lat',position.coords.latitude);
+            console.log('long',position.coords.longitude);
+            var map = L.map('map').setView([latitude_loc,longitude_loc], 13);
+
+            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            
+            L.marker([latitude_loc,longitude_loc]).addTo(map)
+                .bindPopup('Your Location')
+                .openPopup();
+            
+        },(error)=>{
+            console.log(error.message);
+            
+        })**/
+
+        let map, marker;
+
+        // Initialize map at a default location before geolocation
+        map = L.map('map').setView([0, 0], 13);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 25,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        navigator.geolocation.watchPosition((position) => {
+            let latitude = position.coords.latitude;
+            let longitude = position.coords.longitude;
+
+            console.log('Latitude:', latitude);
+            console.log('Longitude:', longitude);
+
+            // Set the map view and marker at the current location
+            if (!marker) {
+                // Create marker if it doesn't exist
+                marker = L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup('You are here!')
+                    .openPopup();
+            } else {
+                // Update marker position if it already exists
+                marker.setLatLng([latitude, longitude]);
+            }
+
+            // Center the map on the current position
+            map.setView([latitude, longitude], 13);
+        }, (error) => {
+            console.log('Error:', error.message);
+        }, {
+            enableHighAccuracy: true,
+            maximumAge: 30000,
+            timeout: 27000
+        });
+      
+    </script>
+
+
+</body>
+
+</html>

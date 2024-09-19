@@ -217,5 +217,13 @@ ${akai}
       console.log(error);
     } 
   }
-  
+  navigator.geolocation.getCurrentPosition((position)=>{
+    console.log('longitiude are',position.coords.longitude);
+    console.log('latitude are',position.coords.latitude);
+  },(error)=>{
+    console.log(error.message);
+    
+  })
   getPersonData();
+
+

@@ -25,6 +25,21 @@ ul li{
     filter:drop-shadow(1px 1px 10px green);
     font-weight: bolder;
 }
+
+.float_but_css{
+    background-color:rgb(52, 145, 245);
+    /* z-index: 100; */
+    position:absolute;
+    color:white;
+    padding:10px 15px;
+    border-radius: 40px;
+    border:none;
+    box-shadow: none;
+    outline:none;
+    
+    right:0;
+    top:390px;
+}
 a{
     text-decoration: none;
 }
@@ -43,6 +58,13 @@ nav{
     display:flex;
     flex-direction:column;
 }
+.forSearch{
+    display:flex;
+    flex-direction: row;
+    /* justify-content: baseline; */
+    align-items: center;
+
+}
 #searchMov{
     margin-top:10px;
     width:99%;
@@ -51,11 +73,14 @@ nav{
     border:1.5px solid black;
     background: transparent;
     max-width:1000px;
+    border-left: none;
+    border-right:none;
+    border-top:none;
     /* display:flex;
     justify-content: center;
     align-content: center; */
     height:40px;
-    border-radius:25px;
+    /* border-radius:25px; */
     font-size:20px;
 }
 #cardBody{
